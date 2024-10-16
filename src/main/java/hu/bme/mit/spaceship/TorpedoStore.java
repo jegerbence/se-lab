@@ -37,8 +37,7 @@ public class TorpedoStore {
 
     // simulate random overheating of the launcher bay which prevents firing
 
-    /// Sonarlint false negative
-    Random generator = new Random();
+    Random generator = new Random(System.currentTimeMillis());
     double r = generator.nextDouble();
 
     if (r >= FAILURE_RATE) {
